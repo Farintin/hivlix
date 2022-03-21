@@ -1,0 +1,11 @@
+a {
+    color: var(--primary-color);
+}
+.button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.button > * {
+    margin: 4px;
+}

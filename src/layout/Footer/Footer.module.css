@@ -1,0 +1,109 @@
+.footer {
+    --col2_bg-color: var(--fg3-color1);
+    display: grid;
+    grid-template-columns: 10% 25% 5% 5% 5% 5% 5% 5% 25% 10%;
+    grid-template-rows: auto minmax(80px, auto);
+    grid-template-areas: "pad_l row1_col1 row1_col1_pad_r row1_col1_pad_r row1_col1_pad_r row1_col2_pad_l row1_col2_pad_l row1_col2 row1_col2 pad_r"
+                         "pad_l row2_col1 row2_col2 row2_col2 row2_col2 row2_col2 row2_col3 row2_col3 row2_col3 pad_r";
+}
+@media (min-width: 1800px) {
+    .footer {
+        --pad-x: calc((-1600px + 100vw)/2);
+        --col-fr: calc(1600px/16);
+        --col-lg: calc(var(--col-fr) * 5);
+        --col-sm: calc(var(--col-fr));
+        grid-template-columns: var(--pad-x) var(--col-lg) var(--col-sm) var(--col-sm) var(--col-sm) var(--col-sm) var(--col-sm) var(--col-sm) var(--col-lg) var(--pad-x);
+    }
+}
+
+.pad_l {
+    grid-area: pad_l;
+}
+.pad_r {
+    grid-area: pad_r;
+    background-color: var(--col2_bg-color);
+}
+.row1_col1 {
+    grid-area: row1_col1;
+}
+.row1_col1_pad_r {
+    grid-area: row1_col1_pad_r;
+}
+.row1_col2_pad_l {
+    grid-area: row1_col2_pad_l;
+    background-color: var(--col2_bg-color);
+}
+.row1_col2 {
+    grid-area: row1_col2;
+    background-color: var(--col2_bg-color);
+}
+
+.row2_col1 {
+    grid-area: row2_col1;
+}
+.row2_col2 {
+    grid-area: row2_col2;
+    background-color: var(--fg2-color1);
+    justify-content: center;
+}
+.row2_col3 {
+    grid-area: row2_col3;
+    background-color: var(--col2_bg-color);
+}
+
+.row1_col1, .row1_col2 {
+    padding: 100px 0;
+}
+.row2_col1, .row2_col2 {
+    display: flex;
+    align-items: center;
+}
+.social_icons > * {
+    margin: 8px 8px;
+}
+.social_icons a {
+    display: flex;
+}
+
+.paraf {
+    font-size: 80%;
+    font-weight: 600;
+    line-height: 2;
+    letter-spacing: .6px;
+    color: var(--fg3-color1);
+}
+.block {
+    margin-bottom: 72px;
+}
+.block:last-child {
+    margin-bottom: 0;
+}
+.block .heading {
+    color: var(--fg1-color2);
+    text-transform: uppercase;
+    font-size: 65%;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+.block .list {
+    list-style: none;
+    display: flex;
+}
+.block .list .item {
+    margin: 4px 4px 4px 0;
+    margin-right: 40px;
+}
+.block .list .item .text {
+    color: var(--fg1-color1);
+    font-size: 80%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
+
+.copyright {
+    font-size: 75%;
+    color: var(--fg1-color3);
+    font-weight: 600;
+}

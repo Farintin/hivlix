@@ -1,0 +1,13 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 1800px) {
+    .wrapper {
+        width: 1600px;
+    }
+}

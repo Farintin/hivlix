@@ -1,0 +1,240 @@
+.carousel {
+    --col-1-padding-l: 30%;
+    --col-2-padding-r: 10%;
+    --row-3-padding-y: 24px;
+    --color1: #fff;
+    height: 100vh;
+    position: relative;
+    background-color: #000;
+}
+.carousel, .carousel * {
+    /*overflow: hidden;*/
+}
+
+.carousel .bg_images {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--fg3-color1);
+}
+.carousel .bg_images .bg_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: 2000ms ease-out;
+}
+.carousel .bg_images .bg_image.active {
+    opacity: 1;
+}
+
+.carousel .main {
+    --bg: rgb(255 255 255 / 5%);
+    --bg-blur: blur(5px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 10% 40% auto 10%;
+    grid-template-rows: 10% auto 25%;
+    transition: var(--transition);
+}
+
+.carousel .main .row_1__col_1 {
+    background-color: var(--bg);
+}
+.carousel .main .row_1__col_2 {
+    background-color: var(--bg);
+}
+.carousel .main .row_1__col_3 {}
+.carousel .main .row_1__col_4 {}
+
+.carousel .main .row_2__col_1 {
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .main .row_2__col_2 {
+    background-color: var(--bg);
+}
+.carousel .main .row_2__col_3 {}
+.carousel .main .row_2__col_4 {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel .main .row_3__col_1 {
+    background-color: var(--bg);
+    backdrop-filter: var(--bg-blur);
+    padding-top: var(--row-3-padding-y);
+    display: flex;
+    justify-content: center;
+}
+.carousel .main .row_3__col_2 {
+    background-color: var(--bg);
+    backdrop-filter: var(--bg-blur);
+    padding-right: var(--col-2-padding-r);
+    padding-top: var(--row-3-padding-y);
+    padding-bottom: var(--row-3-padding-y);
+}
+.carousel .main .row_3__col_3 {
+    backdrop-filter: var(--bg-blur);
+    padding-right: var(--col-2-padding-r);
+    padding-top: var(--row-3-padding-y);
+    padding-bottom: var(--row-3-padding-y);
+}
+.carousel .main .row_3__col_4 {
+    backdrop-filter: var(--bg-blur);
+}
+
+
+
+.carousel .main .row_2__col_1 > * {
+    margin: 16px 0;
+}
+.carousel .main .row_3__col_1 > *, .carousel .main .row_3__col_2 > *, .carousel .main .row_3__col_3 > * {
+    margin: 4px 0;
+}
+.carousel .main .row_3__col_2, .carousel .main .row_3__col_3 {
+    padding-left: 20%;
+}
+
+.carousel .segment.content {
+    position: relative;
+}
+.carousel .segment .content {
+    position: absolute;
+    padding-left: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right: var(--col-2-padding-r);
+    opacity: 0;
+    transition: 2000ms ease-out;
+}
+.carousel .segment .content.active {
+    opacity: 1;
+}
+.carousel .segment .content > * {
+    margin: 10px 0;
+}
+
+.carousel .main .nth_slide {
+    font-size: 120%;
+    font-weight: 500;
+}
+
+
+.carousel .dots {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    display: flex;
+}
+.carousel .dots .dot {
+    --size: 12px;
+    width: var(--size);
+    height: var(--size);
+    margin: 4px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+.carousel .dots .dot.active {
+    background-color: var(--fg1-color1);
+}
+
+.carousel .thumbtack {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.carousel .thumbtack .icon {
+    display: none;
+    transition: 500ms;
+}
+.carousel .thumbtack .icon.active {
+    display: block;
+    transition: var(--transition);
+}
+.carousel .thumbtack .icon.unpin {
+    stroke-width: 1px;
+    width: 60%;
+    height: fit-content;
+}
+.carousel .thumbtack:hover {
+    background-color: var(--fg2-color1);
+}
+.carousel .thumbtack:hover .icon.unpin {
+    fill: var(--fg1-color1);
+    width: 50%;
+}
+.carousel .thumbtack .icon.pinned {
+    --size: 40%;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: #000;
+}
+.carousel .thumbtack:hover .icon.pinned {
+    --size: 60%;
+    background-color: var(--fg1-color1);
+}
+
+.carousel .scroll_down {
+    --size: 50px;
+    position: absolute;
+    bottom: 20%;
+    transform: translateY(calc(50% + var(--row-3-padding-y)));
+    right: 10%;
+    width: var(--size);
+    height: var(--size);
+    padding: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+.carousel .scroll_down .icon {
+    width: 60%;
+    height: fit-content;
+    transition: var(--transition);
+}
+.carousel .scroll_down:hover {
+    background-color: var(--fg2-color1);
+}
+.carousel .scroll_down:hover .icon {
+    stroke: var(--fg1-color1);
+    width: 80%;
+}
+
+@media (min-width: 1600px) {
+    .carousel {
+        --col-2-padding-r: 30%;
+    }
+}
+@media (min-width: 1800px) {    
+    .carousel .main {
+        grid-template-columns: calc((-1600px + 100vw)/2) 800px 800px calc((-1600px + 100vw)/2);
+    }
+        
+    .carousel .scroll_down {
+        right: calc((-1600px + 100vw)/2);
+    }
+}

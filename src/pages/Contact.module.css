@@ -1,0 +1,112 @@
+.contact_page {
+    background-color: var(--fg3-color1);
+    height: 100vh;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 200px;
+}
+
+.info {
+    align-self: flex-end;
+    width: 50%;
+    height: 100px;
+    background-color: var(--fg2-color1);
+    z-index: 1;
+}
+
+.form_section {
+    width: calc(40% + 36px);
+    box-sizing: border-box;
+    border: 8px solid var(--fg1-color1);
+    margin-left: 10%;
+    margin-top: 50px;
+    position: absolute;
+    padding: 72px 108px 108px 72px;
+}
+
+.form_section .heading {
+    font-size: 250%;
+    font-weight: 800;
+    color: var(--fg1-color1);
+    line-height: 1;
+}
+
+.form {
+    --common-spacing: 24px;
+    margin-top: 24px;
+}
+
+.form .area {
+    margin: calc(var(--common-spacing)*2) 0 0;
+    position: relative;
+}
+.form .area label {
+    position: absolute;
+    transform: translateY(0);
+    font-size: 95%;
+    font-weight: 500;
+    color: var(--fg1-color1);
+    transition: var(--transition);
+}
+.form .area.focused label {
+    transform: translateY(calc(-1*var(--common-spacing)));
+    font-size: 75%;
+    font-weight: 600;
+}
+.form area .field {
+    position: absolute;
+    width: 100%;
+}
+.form .field .border_line .line {
+    height: 1px;
+}
+.form .field .border_line .line.focused {
+    background-color: var(--fg2-color2);
+    opacity: 0;
+    z-index: 0;
+    width: 0;
+    transition: 0ms;
+}
+.form .field .border_line .line.unfocused {
+    background-color: var(--fg1-color1);
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+    transition: 1000ms;
+}
+.form .field .data_field {
+    width: 100%;
+    height: 24px;
+    background: none;
+    outline: none;
+    border: 0;
+    color: var(--fg1-color1);
+}
+
+.form .field textarea.data_field {
+    height: 96px;
+}
+.form .field .data_field:focus + .border_line .line.unfocused {
+    width: 0;
+    opacity: 0;
+    z-index: 0;
+    transition: 0ms;
+}
+.form .field .data_field:focus + .border_line .line.focused {
+    width: 100%;
+    opacity: 1;
+    z-index: 1;
+    transition: 1000ms;
+}
+
+.form button {
+    background-color: transparent;
+    border: 2px solid var(--fg2-color2);
+    padding: 8px 24px;
+    font-size: 110%;
+    color: var(--fg1-color1);
+    margin-top: calc(var(--common-spacing)*2);
+    cursor: pointer;
+}

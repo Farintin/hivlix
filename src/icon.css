@@ -1,0 +1,5 @@
+.icon.svg {
+    width: 22px;
+    height: fit-content;
+    transition: var(--transition)
+}

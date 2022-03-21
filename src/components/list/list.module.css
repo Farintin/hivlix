@@ -1,0 +1,15 @@
+.list {
+    list-style: none;
+}
+
+.list .item {
+    line-height: 100%;
+    margin: 4px 0;
+    font-weight: 500;
+}
+.list .item:first-child {
+    margin-top: 0;
+}
+.list .item:last-child {
+    margin-bottom: 0;
+}

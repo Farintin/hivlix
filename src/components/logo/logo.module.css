@@ -1,0 +1,8 @@
+.logo .text {
+    font-size: 170%;
+    font-family: 'Tenor Sans', sans-serif;
+    letter-spacing: -3.9px;
+}
+.logo .text::first-letter {
+    font-size: 130%;
+}

@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+}
+.menu .menu_item {
+    margin: 4px 36px;
+    font-size: 85%;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+.menu .menu_item:hover {
+    color: var(--secondary-color);
+}
+.menu .menu_item.active {
+    color: var(--secondary-color);
+}

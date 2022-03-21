@@ -1,0 +1,11 @@
+footer .social_icons .icon.svg {
+    fill: var(--fg3-color1);
+    stroke: var(--fg3-color1);
+}
+footer .social_icons .icon.svg:hover {
+    fill: var(--fg1-color1);
+    stroke: var(--fg1-color1);
+}
+footer .logo .text {
+    color: var(--fg3-color1);
+}
