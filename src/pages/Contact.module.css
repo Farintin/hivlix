@@ -68,6 +68,11 @@
     border: 0;
     color: var(--fg1-color1);
 }
+/*.form .field .data_field:-internal-autofill-selected {
+    appearance: none!important;
+    background: none!important;
+    color: -internal-light-dark(var(--fg1-color1))!important;
+}*/
 .form .field textarea.data_field {
     height: 96px;
 }
