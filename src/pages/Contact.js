@@ -22,6 +22,7 @@ function Contact() {
 
     const focusHandler = (e) => {
         e.target.parentNode.parentNode.classList.add(`${style.focused}`)
+        e.target.classList.remove(`${style.error}`)
     }
     const blurHandler = (e) => {
         if (e.target.value === '') {
@@ -59,6 +60,12 @@ function Contact() {
                 //console.log('errors:', errors)
                 for (let e in errors) {
                     toast.error(errors[e])
+                }
+                
+                for (let field of fields) {
+                    if (Object.keys(errors).includes(field.current.getAttribute('id'))) {
+                        field.current.classList.add(`${style.error}`)
+                    }
                 }
             }
             setSubmit(false)
