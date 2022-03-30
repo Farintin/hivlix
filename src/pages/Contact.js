@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import ListTable from '../components/list_table/list_table';
 
 import style from './Contact.module.css'
 
@@ -107,90 +108,114 @@ function Contact() {
 
     return (
         <section className={style.contact_page}>
-            
-            <div className={style.info}></div>
-            <div className={style.form_section}>
+            <div className={style.wrapper}>
+                
+                <div className={style.info}>
+                    <div className={style.header}>
+                        <p className={style.heading}>CONTACT ME</p>
+                    </div>
+                    <div className={style.body}>
+                        <p className={style.paraf}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sed placerat diam vel lectus viverra, vel placerat nisi tristique. 
+                            Sed ligula metus, mattis sit amet mattis vitae, rutrum ut lorem.</p>
+                        <p className={style.paraf}>122 3rd Street East <br/>
+                            Saskatoon, SK <br/>
+                            S7K 1R9.</p>
+                        <ListTable list={[
+                            {
+                                heading: 'email',
+                                body: 'info@mopro.com'
+                            },
+                            {
+                                heading: 'phone',
+                                body: '1-306-222-2323'
+                            }
+                        ]}/>
+                    </div>
+                </div>
 
-                <h1 className={style.heading}>Send a message</h1>
-                <form onSubmit={submitHandler} className={style.form}>
-                    <div className={`${style.area}`}>
-                        <label htmlFor="name">Your Name</label>
-                        <div className={style.field}>
-                            <input id="name" 
-                                name="name"
-                                type="text" 
-                                ref={nameField}
-                                onChange={handleChange}
-                                onFocus={focusHandler}
-                                onBlur={blurHandler}
-                                value={form.name}
-                                className={`${style.data_field} a`}
-                            />
-                            <div className={style.border_line}>
-                                <div className={`${style.line} ${style.unfocused} ${style.active}`}></div>
-                                <div className={`${style.line} ${style.focused}`}></div>
+                <div className={style.form_section}>
+                    <h1 className={style.heading}>Send a message</h1>
+                    <form onSubmit={submitHandler} className={style.form}>
+                        <div className={`${style.area}`}>
+                            <label htmlFor="name">Your Name</label>
+                            <div className={style.field}>
+                                <input id="name" 
+                                    name="name"
+                                    type="text" 
+                                    ref={nameField}
+                                    onChange={handleChange}
+                                    onFocus={focusHandler}
+                                    onBlur={blurHandler}
+                                    value={form.name}
+                                    className={`${style.data_field} a`}
+                                />
+                                <div className={style.border_line}>
+                                    <div className={`${style.line} ${style.unfocused} ${style.active}`}></div>
+                                    <div className={`${style.line} ${style.focused}`}></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={`${style.area}`}>
-                        <label htmlFor='email'>Your Email</label>
-                        <div className={style.field}>
-                            <input id="email"
-                                name="email" 
-                                type="email" 
-                                ref={emailField}
-                                onChange={handleChange}
-                                onFocus={focusHandler}
-                                onBlur={blurHandler}
-                                value={form.email}
-                                className={`${style.data_field}`}
-                            />
-                            <div className={style.border_line}>
-                                <div className={`${style.line} ${style.unfocused} ${style.active}`}></div>
-                                <div className={`${style.line} ${style.focused}`}></div>
+                        <div className={`${style.area}`}>
+                            <label htmlFor='email'>Your Email</label>
+                            <div className={style.field}>
+                                <input id="email"
+                                    name="email" 
+                                    type="email" 
+                                    ref={emailField}
+                                    onChange={handleChange}
+                                    onFocus={focusHandler}
+                                    onBlur={blurHandler}
+                                    value={form.email}
+                                    className={`${style.data_field}`}
+                                />
+                                <div className={style.border_line}>
+                                    <div className={`${style.line} ${style.unfocused} ${style.active}`}></div>
+                                    <div className={`${style.line} ${style.focused}`}></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={style.area}>
-                        <label htmlFor='subject'>Subject</label>
-                        <div className={style.field}>
-                            <input id="subject"
-                                name="subject" 
-                                type="text" 
-                                ref={subjectField}
-                                onChange={handleChange}
-                                onFocus={focusHandler}
-                                onBlur={blurHandler}
-                                value={form.subject}
-                                className={`${style.data_field}`}
-                            />
-                            <div className={style.border_line}>
-                                <div className={`${style.line} ${style.unfocused} ${style.active}`}></div>
-                                <div className={`${style.line} ${style.focused}`}></div>
+                        <div className={style.area}>
+                            <label htmlFor='subject'>Subject</label>
+                            <div className={style.field}>
+                                <input id="subject"
+                                    name="subject" 
+                                    type="text" 
+                                    ref={subjectField}
+                                    onChange={handleChange}
+                                    onFocus={focusHandler}
+                                    onBlur={blurHandler}
+                                    value={form.subject}
+                                    className={`${style.data_field}`}
+                                />
+                                <div className={style.border_line}>
+                                    <div className={`${style.line} ${style.unfocused} ${style.active}`}></div>
+                                    <div className={`${style.line} ${style.focused}`}></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={style.area}>
-                        <label htmlFor='message'>Message</label>
-                        <div className={style.field}>
-                            <textarea id="message"
-                                name="message"
-                                ref={messageField}
-                                onChange={handleChange}
-                                onFocus={focusHandler}
-                                onBlur={blurHandler}
-                                value={form.message}
-                                className={`${style.data_field}`}
-                            ></textarea>
-                            <div className={style.border_line}>
-                                <div className={`${style.line} ${style.unfocused} ${style.active}`}></div>
-                                <div className={`${style.line} ${style.focused}`}></div>
+                        <div className={style.area}>
+                            <label htmlFor='message'>Message</label>
+                            <div className={style.field}>
+                                <textarea id="message"
+                                    name="message"
+                                    ref={messageField}
+                                    onChange={handleChange}
+                                    onFocus={focusHandler}
+                                    onBlur={blurHandler}
+                                    value={form.message}
+                                    className={`${style.data_field}`}
+                                ></textarea>
+                                <div className={style.border_line}>
+                                    <div className={`${style.line} ${style.unfocused} ${style.active}`}></div>
+                                    <div className={`${style.line} ${style.focused}`}></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <button type="submit">SUBMIT</button>
-                </form>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
 
             </div>
 

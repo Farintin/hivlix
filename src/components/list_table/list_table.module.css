@@ -1,0 +1,17 @@
+.list_table .row {
+    display: flex;
+    margin-bottom: 10px;
+    --padding: 5px 30px 5px 0;
+}
+.list_table .heading {
+    padding: var(--padding);
+    text-transform: capitalize;
+}
+.list_table .body {
+    padding: var(--padding);
+}
+.list_table .text {
+    color: var(--fg3-color1);
+    font-size: 108%;
+    line-height: 75%;
+}

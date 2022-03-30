@@ -1,34 +1,66 @@
 .contact_page {
-    background-color: var(--fg3-color1);
-    height: 100vh;
+    --common-gap: 36px;
+    --info-w: 50%;
     padding-top: 200px;
+    padding-bottom: 200px;
+}
+.contact_page .wrapper {
+    width: 80%;
+    max-width: 1600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 200px;
 }
 
 .info {
+    --color: var(--fg3-color1);
     align-self: flex-end;
-    width: 50%;
-    height: 100px;
+    width: calc((-100% + 100vw)/2 + var(--info-w));
     background-color: var(--fg2-color1);
     z-index: 1;
+    padding: var( --common-gap);
+    padding-right: calc((-100% + 100vw)/2 + 10%);
+    box-sizing: border-box;
+    position: absolute;
+    left: var(--info-w);
+}
+.info .header {
+    padding-bottom: 30px;
+}
+.info .header .heading {
+    color: var(--color);
+    font-size: 200%;
+    font-weight: 600;
+    line-height: 75%;
+}
+.info .body > * {
+    margin-bottom: 40px;
+}
+/*.info .body > *:first-child {
+    margin-top: 0;
+}*/
+.info .body > *:last-child {
+    margin-bottom: 0;
+}
+.info .paraf {
+    font-size: 108%;
+    line-height: 180%;
+    color: var(--color);
+    padding-right: 5%;
 }
 
 .form_section {
-    width: calc(40% + 36px);
+    width: calc(100% - var(--info-w) + var(--common-gap));
     box-sizing: border-box;
     border: 8px solid var(--fg1-color1);
-    margin-left: 10%;
-    margin-top: 50px;
-    position: absolute;
+    margin-top: 100px;
     padding: 72px 108px 108px 72px;
 }
 
 .form_section .heading {
-    font-size: 250%;
-    font-weight: 800;
+    font-size: 270%;
+    font-weight: 700;
     color: var(--fg1-color1);
     line-height: 1;
 }

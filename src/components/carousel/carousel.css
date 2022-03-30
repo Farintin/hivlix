@@ -5,7 +5,6 @@
     --color1: #fff;
     height: 100vh;
     position: relative;
-    background-color: #000;
 }
 .carousel, .carousel * {
     /*overflow: hidden;*/
