@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+:root {
+    --fg1-color1: #fff;
+    --fg1-color2: #cfcfcf;
+    --fg1-color3: #b7b7b7;
+    --fg2-color1: #ffff6b;
+    --fg2-color2: #ffff40;
+    --fg3-color1: #202020;
+
+    --transition: 250ms ease;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    background: var(--fg3-color1);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--fg2-color1);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fg2-color2);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--fg3-color1);
+}
+a {
+    text-decoration: none;
+}
+a .color {
+    color: var(--fg1-color1);
+    fill: var(--fg1-color1);
+    stroke: var(--fg1-color1);
+}
+a:hover .color {
+    color: var(--fg2-color1);
+    fill: var(--fg2-color1);
+    stroke: var(--fg2-color1);
+}
+
+.text {
+    color: var(--color1);
+    line-height: 120%;
+}
+.paraf {
+    color: var(--color1);
+    line-height: 170%;
+}
+
+.fg-color1 {
+    color: var(--fg1-color1)!important;
+}
+.fg-color2 {
+    color: var(--fg1-color2)!important;
+}
+.fg-color3 {
+    color: var(--fg2-color1)!important;
+}
+.typo-attention-color {
+    color: #ffffad!important;
+}
+
+
+.h1 {
+    font-size: 280%;
+    font-weight: 500;
+}
+.h2 {
+    font-size: 140%;
+    font-weight: 600;
+}
+.h3 {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+
+.align-self-start {
+    align-self: flex-start;
+}
+.align-self-end {
+    align-self: flex-end;
+}
+.align-self-center {
+    align-self: center;
+}

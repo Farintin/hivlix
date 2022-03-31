@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import './index.css'
-import './icon.css'
+import './css/size.css'
+import './css/index.css'
+import './css/icon.css'
+
 import App from './App'
 
 

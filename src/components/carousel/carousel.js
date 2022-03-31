@@ -6,8 +6,8 @@ import TwitterIcon from '../icons/twitter'
 import LinkedinIcon from '../icons/linkedin'
 import LocationIcon from '../icons/location'
 
-import Button from '../button/'
-import List from '../list/'
+import Button from '../button/button'
+import List from '../list/list'
 
 import { slides } from '../../data/slides'
 

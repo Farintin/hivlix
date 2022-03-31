@@ -3,9 +3,9 @@ import React from 'react'
 import style from './Header.module.css'
 
 import Logo from '../../components/logo/logo'
-import Nav from '../../components/nav'
+import Nav from '../../components/nav/nav'
 import MailIcon from '../../components/icons/mail'
-import Button from '../../components/button'
+import Button from '../../components/button/button'
 
 import { menuLinks } from '../../data/menu'
 

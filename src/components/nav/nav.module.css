@@ -6,12 +6,12 @@
     font-size: 85%;
     font-weight: 400;
     text-transform: capitalize;
-    color: var(--primary-color);
+    color: var(--fg1-color1);
     transition: var(--transition);
 }
 .menu .menu_item:hover {
-    color: var(--secondary-color);
+    color: var(--fg2-color1);
 }
 .menu .menu_item.active {
-    color: var(--secondary-color);
+    color: var(--fg2-color1);
 }
