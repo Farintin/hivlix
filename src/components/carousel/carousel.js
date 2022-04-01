@@ -125,7 +125,8 @@ function Carousel() {
                         key={i} 
                         index={i}
                         src={slide.bg_image} 
-                        className={`bg_image ${i === 0 ? 'active' : ''}`} />
+                        className={`bg_image ${i === 0 ? 'active' : ''}`}
+                        alt="background image"/>
                 })}
             </div>
 
@@ -136,7 +137,7 @@ function Carousel() {
                 <div className="row_1__col_4 segment"></div>
                 
                 <div className="row_2__col_1 segment">
-                    <a href='#'>
+                    <a href="#">
                         <TwitterIcon addClassName="color"/>
                     </a>
                     <a href='#'>

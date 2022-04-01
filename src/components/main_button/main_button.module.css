@@ -1,0 +1,15 @@
+a.button {
+    display: inline-block;
+    --color: var(--fg3-color1);
+    color: var(--color);
+    padding: 12px 36px;
+    border: 3px solid var(--color);
+    font-size: 105%;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+a.button:hover {
+    --color: var(--fg1-color1);
+}

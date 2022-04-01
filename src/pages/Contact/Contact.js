@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import ListTable from '../components/list_table/list_table';
+import ListTable from '../../components/list_table/list_table';
 
 import style from './Contact.module.css'
 

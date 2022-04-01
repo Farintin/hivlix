@@ -10,6 +10,9 @@
     --fg3-color1: #202020;
 
     --transition: 250ms ease;
+
+    --respnsv-W: 80vw;
+    --respnsv-maxW: 1600px;
 }
 ::-webkit-scrollbar {
     width: 12px;
