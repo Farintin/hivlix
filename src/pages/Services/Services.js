@@ -1,11 +1,13 @@
 import React from 'react'
 
+import DoesNotExist from '../../components/doesNotExist/doesNotExist'
+
 
 
 function Services() {
-    return <>
-        Services
-    </>
+    return (
+        <DoesNotExist text="Coming soon..."/>
+    )
 }
 
 
